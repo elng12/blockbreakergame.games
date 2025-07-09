@@ -30,8 +30,6 @@
 
     <!-- Tailwind CSS CDN Script -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Tailwind Aspect Ratio Plugin (optional, but good to have) -->
     <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
 
 </head>
@@ -50,12 +48,14 @@
             </p>
         </header>
 
-        <!-- Game Iframe Section -->
+        <!-- ======================================================= -->
+        <!--     这是新的、可以正常工作的游戏代码块     -->
+        <!-- ======================================================= -->
         <main class="bg-white rounded-2xl shadow-lg p-2 md:p-3">
             <!-- Responsive Iframe Wrapper -->
             <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg">
                 <iframe 
-                    src="https://blockbreakergame.io/block-breaker.embed" 
+                    src="https://html-classic-games.com/breakout-game-embed/" 
                     class="w-full h-full"
                     style="border: none;" 
                     frameborder="0"
@@ -65,6 +65,8 @@
                 </iframe>
             </div>
         </main>
+        <!-- ======================================================= -->
+
 
         <!-- Game Description Section -->
         <section class="mt-12 md:mt-16 text-left">
