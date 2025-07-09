@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="frame-src https://blockbreakergame.io;">
 
     <!-- SEO Meta Tags -->
     <title>Google Block Breaker - Play the Classic Arcade Game Online</title>
@@ -31,8 +32,33 @@
     <!-- Tailwind CSS CDN Script -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Tailwind Aspect Ratio Plugin (optional, but good to have) -->
+    <!-- Tailwind Aspect Ratio Plugin -->
     <script src="https://cdn.tailwindcss.com?plugins=aspect-ratio"></script>
+
+    <!-- GitHub Pages 兼容性修复 -->
+    <script>
+      // 修复GitHub Pages上的跨域问题
+      if(location.host.includes('github.io')) {
+        const iframe = document.createElement('iframe');
+        iframe.classList.add('w-full', 'h-full');
+        iframe.style.border = 'none';
+        iframe.frameborder = 0;
+        iframe.scrolling = 'no';
+        iframe.allowFullscreen = true;
+        iframe.title = 'Google Block Breaker Game';
+        iframe.src = 'https://blockbreakergame.io/block-breaker.embed';
+        
+        // 延迟加载防止阻塞
+        window.addEventListener('DOMContentLoaded', () => {
+          document.querySelector('.aspect-w-4').appendChild(iframe);
+        });
+      }
+    </script>
+    <style>
+      /* 修复GitHub Pages上的CSS加载问题 */
+      .aspect-w-4 { position: relative; padding-bottom: 75%; }
+      .aspect-w-4 iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
 
 </head>
 <body class="bg-gray-100 text-gray-700 antialiased">
@@ -52,17 +78,17 @@
 
         <!-- Game Iframe Section -->
         <main class="bg-white rounded-2xl shadow-lg p-2 md:p-3">
-            <!-- Responsive Iframe Wrapper -->
+            <!-- 修复后的响应式容器 -->
             <div class="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg">
-                <iframe 
-                    src="https://blockbreakergame.io/block-breaker.embed" 
-                    class="w-full h-full"
-                    style="border: none;" 
-                    frameborder="0"
-                    scrolling="no"
-                    allowfullscreen
-                    title="Google Block Breaker Game">
-                </iframe>
+                <!-- 动态加载的iframe会插入这里 -->
+                <!-- 备用内容 -->
+                <div id="game-fallback" class="hidden bg-gray-200 border-2 border-dashed rounded-xl w-full h-full flex items-center justify-center text-gray-500">
+                    <div class="text-center p-4">
+                        <p class="mb-3">Loading game...</p>
+                        <button onclick="location.reload()" class="px-4 py-2 bg-blue-500 text-white rounded-md">Retry</button>
+                        <p class="mt-4 text-sm">If the game doesn't load, visit <a href="https://blockbreakergame.io" class="text-blue-500 underline">blockbreakergame.io</a></p>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -92,5 +118,21 @@
         </footer>
 
     </div>
+    
+    <!-- GitHub Pages 部署检测 -->
+    <script>
+      // 显示备用内容如果游戏未加载
+      setTimeout(() => {
+        if (!document.querySelector('.aspect-w-4 iframe') || 
+            document.querySelector('.aspect-w-4 iframe').clientHeight === 0) {
+          document.getElementById('game-fallback').classList.remove('hidden');
+        }
+      }, 3000);
+      
+      // 修复GitHub Pages路由问题
+      if(location.host.includes('github.io') && location.pathname.includes('index.html')) {
+        history.replaceState(null, '', location.pathname.replace('index.html', ''));
+      }
+    </script>
 </body>
 </html>
