@@ -12,6 +12,9 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://blockbreakergame.games">
     
+    <!-- Sitemap for SEO -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Google Block Breaker - Play the Classic Arcade Game Online Free">
@@ -52,11 +55,20 @@
     <link rel="dns-prefetch" href="https://blockbreakergame.io">
     
     <!-- Favicon and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- PWA Meta Tags -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Block Breaker">
+    <meta name="msapplication-TileColor" content="#06b6d4">
+    <meta name="msapplication-config" content="/browserconfig.xml">
     
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -192,6 +204,52 @@
         ]
     }
     </script>
+    
+    <!-- Breadcrumb Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://blockbreakergame.games/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Play Game",
+                "item": "https://blockbreakergame.games/#game"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "About Game",
+                "item": "https://blockbreakergame.games/#about"
+            },
+            {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "How to Play",
+                "item": "https://blockbreakergame.games/#how-to-play"
+            },
+            {
+                "@type": "ListItem",
+                "position": 5,
+                "name": "Features",
+                "item": "https://blockbreakergame.games/#features"
+            },
+            {
+                "@type": "ListItem",
+                "position": 6,
+                "name": "FAQ",
+                "item": "https://blockbreakergame.games/#faq"
+            }
+        ]
+    }
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
     <!-- Header Section -->
@@ -271,10 +329,103 @@
 
     <!-- Main Content -->
     <main>
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-blue-50 via-white to-cyan-50 py-16 lg:py-24">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <!-- Main Hero Title -->
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Google Block Breaker
+                        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+                            Play the Classic Arcade Game Online
+                        </span>
+                    </h1>
+                    
+                    <!-- Hero Description -->
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto leading-relaxed">
+                        Experience the ultimate Google Block Breaker game with stunning graphics, smooth gameplay, and addictive action. 
+                        Break colorful blocks, master challenging levels, and compete for high scores in this classic arcade adventure.
+                        <span class="block mt-2 text-lg text-gray-500">
+                            🎮 No download required • 📱 Play on any device • 🆓 Completely free
+                        </span>
+                    </p>
+                    
+                    <!-- Hero CTA Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                        <a href="#game" class="bg-gradient-to-r from-cyan-400 to-blue-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:from-cyan-500 hover:to-blue-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 animate-pulse shadow-cyan-400/50 inline-flex items-center space-x-2">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>🚀 Play Now - Free!</span>
+                        </a>
+                        <a href="#how-to-play" class="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-full text-lg font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-300 inline-flex items-center space-x-2">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span>📖 How to Play</span>
+                        </a>
+                    </div>
+                    
+                    <!-- Key Features Highlights -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                        <div class="bg-white/70 backdrop-blur-sm rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200/50">
+                            <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">⚡ Instant Play</h3>
+                            <p class="text-gray-600">Jump right into the action! No downloads, no installations - just pure Google Block Breaker gaming fun.</p>
+                        </div>
+                        
+                        <div class="bg-white/70 backdrop-blur-sm rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200/50">
+                            <div class="w-12 h-12 bg-gradient-to-br from-purple-400 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">📱 Mobile Optimized</h3>
+                            <p class="text-gray-600">Perfect touch controls and responsive design make Google Block Breaker amazing on any device.</p>
+                        </div>
+                        
+                        <div class="bg-white/70 backdrop-blur-sm rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow border border-gray-200/50">
+                            <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-red-500 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-2">🎯 Addictive Gameplay</h3>
+                            <p class="text-gray-600">Classic arcade action with modern twists. Master your skills and achieve the highest scores!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Game Section -->
         <section id="game" class="py-8 bg-white">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <h2 class="text-3xl font-bold text-center mb-8">Play Google Block Breaker Now</h2>
+                
+                <!-- High Score Display -->
+                <div class="text-center mb-6">
+                    <div class="inline-flex items-center space-x-6 bg-gradient-to-r from-yellow-50 to-orange-50 px-6 py-3 rounded-full border-2 border-yellow-200">
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                            </svg>
+                            <span class="text-yellow-800 font-semibold">Your Best Score:</span>
+                            <span id="high-score-display" class="text-2xl font-bold text-yellow-900">0</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <svg class="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.414-1.414L11 9.586V6z" clip-rule="evenodd"/>
+                            </svg>
+                            <span class="text-blue-800 font-semibold">Games Played:</span>
+                            <span id="games-played-display" class="text-xl font-bold text-blue-900">0</span>
+                        </div>
+                    </div>
+                </div>
                 
                 <!-- Game Description -->
                 <div class="text-center mb-8">
@@ -322,6 +473,29 @@
                             onload="handleGameLoad()"
                             onerror="handleGameError()">
                         </iframe>
+                    </div>
+                </div>
+                
+                <!-- PWA Install Prompt -->
+                <div id="pwa-install-prompt" class="hidden mt-4 bg-gradient-to-r from-green-500 to-teal-500 text-white p-4 rounded-lg shadow-lg">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                            </svg>
+                            <div>
+                                <h4 class="font-semibold">📱 Install Block Breaker</h4>
+                                <p class="text-sm opacity-90">Add to your home screen for quick access!</p>
+                            </div>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button id="pwa-install-btn" class="bg-white text-green-600 px-4 py-2 rounded-full font-semibold hover:bg-green-50 transition-colors">
+                                Install
+                            </button>
+                            <button id="pwa-dismiss-btn" class="text-white hover:text-green-200 transition-colors">
+                                ✕
+                            </button>
+                        </div>
                     </div>
                 </div>
                 
@@ -392,6 +566,35 @@
                                 <span>Copy Link</span>
                             </button>
                         </div>
+                    </div>
+                </div>
+                
+                <!-- Game Statistics Panel -->
+                <div class="mt-8 bg-gradient-to-r from-blue-50 to-purple-50 rounded-lg p-6">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-lg font-semibold text-blue-800">Your Game Statistics</h3>
+                        <button onclick="gameStats.resetStats()" class="text-sm text-red-600 hover:text-red-800 underline">
+                            Reset Stats
+                        </button>
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-4 mb-4">
+                        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+                            <div class="text-2xl font-bold text-yellow-600" id="avg-score-display">0</div>
+                            <div class="text-sm text-gray-600">Average Score</div>
+                        </div>
+                        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+                            <div class="text-2xl font-bold text-green-600" id="total-score-display">0</div>
+                            <div class="text-sm text-gray-600">Total Score</div>
+                        </div>
+                        <div class="text-center bg-white rounded-lg p-4 shadow-sm">
+                            <div class="text-2xl font-bold text-purple-600" id="achievements-count">0</div>
+                            <div class="text-sm text-gray-600">Achievements</div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button onclick="window.simulateGameEnd()" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm">
+                            🎮 Simulate Game End (Demo)
+                        </button>
                     </div>
                 </div>
                 
@@ -1340,6 +1543,281 @@
             
             if (shareMenu && !shareMenu.contains(event.target) && !shareButton) {
                 shareMenu.classList.add('hidden');
+            }
+        });
+
+        // PWA Installation functionality
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            // Prevent the mini-infobar from appearing on mobile
+            e.preventDefault();
+            // Stash the event so it can be triggered later
+            deferredPrompt = e;
+            // Show the PWA install prompt
+            showPWAInstallPrompt();
+        });
+
+        function showPWAInstallPrompt() {
+            const installPrompt = document.getElementById('pwa-install-prompt');
+            if (installPrompt) {
+                installPrompt.classList.remove('hidden');
+            }
+        }
+
+        function hidePWAInstallPrompt() {
+            const installPrompt = document.getElementById('pwa-install-prompt');
+            if (installPrompt) {
+                installPrompt.classList.add('hidden');
+            }
+        }
+
+        // PWA install button click handler
+        document.addEventListener('DOMContentLoaded', function() {
+            const installBtn = document.getElementById('pwa-install-btn');
+            const dismissBtn = document.getElementById('pwa-dismiss-btn');
+
+            if (installBtn) {
+                installBtn.addEventListener('click', async () => {
+                    if (deferredPrompt) {
+                        // Show the install prompt
+                        deferredPrompt.prompt();
+                        // Wait for the user to respond to the prompt
+                        const { outcome } = await deferredPrompt.userChoice;
+                        console.log(`User response to the install prompt: ${outcome}`);
+                        // Clear the deferredPrompt variable
+                        deferredPrompt = null;
+                        // Hide the install prompt
+                        hidePWAInstallPrompt();
+                    }
+                });
+            }
+
+            if (dismissBtn) {
+                dismissBtn.addEventListener('click', () => {
+                    hidePWAInstallPrompt();
+                    // Don't show again for this session
+                    sessionStorage.setItem('pwa-dismissed', 'true');
+                });
+            }
+
+            // Check if already dismissed this session
+            if (sessionStorage.getItem('pwa-dismissed')) {
+                hidePWAInstallPrompt();
+            }
+        });
+
+        // Listen for the app being installed
+        window.addEventListener('appinstalled', (evt) => {
+            console.log('PWA was installed');
+            hidePWAInstallPrompt();
+        });
+
+        // Local Storage High Score System
+        class GameStats {
+            constructor() {
+                this.storageKey = 'blockBreakerStats';
+                this.loadStats();
+                this.updateDisplay();
+            }
+
+            loadStats() {
+                const saved = localStorage.getItem(this.storageKey);
+                if (saved) {
+                    this.stats = JSON.parse(saved);
+                } else {
+                    this.stats = {
+                        highScore: 0,
+                        gamesPlayed: 0,
+                        totalScore: 0,
+                        lastPlayed: null,
+                        achievements: []
+                    };
+                }
+            }
+
+            saveStats() {
+                localStorage.setItem(this.storageKey, JSON.stringify(this.stats));
+            }
+
+            updateHighScore(newScore) {
+                if (newScore > this.stats.highScore) {
+                    this.stats.highScore = newScore;
+                    this.showNewHighScoreNotification(newScore);
+                }
+                this.stats.gamesPlayed++;
+                this.stats.totalScore += newScore;
+                this.stats.lastPlayed = new Date().toISOString();
+                this.saveStats();
+                this.updateDisplay();
+                this.checkAchievements();
+            }
+
+            updateDisplay() {
+                const highScoreElement = document.getElementById('high-score-display');
+                const gamesPlayedElement = document.getElementById('games-played-display');
+                const avgScoreElement = document.getElementById('avg-score-display');
+                const totalScoreElement = document.getElementById('total-score-display');
+                const achievementsElement = document.getElementById('achievements-count');
+                
+                if (highScoreElement) {
+                    highScoreElement.textContent = this.stats.highScore.toLocaleString();
+                }
+                if (gamesPlayedElement) {
+                    gamesPlayedElement.textContent = this.stats.gamesPlayed.toLocaleString();
+                }
+                if (avgScoreElement) {
+                    avgScoreElement.textContent = this.getAverageScore().toLocaleString();
+                }
+                if (totalScoreElement) {
+                    totalScoreElement.textContent = this.stats.totalScore.toLocaleString();
+                }
+                if (achievementsElement) {
+                    achievementsElement.textContent = this.stats.achievements.length;
+                }
+            }
+
+            showNewHighScoreNotification(score) {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.className = 'fixed top-20 right-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 transform translate-x-full transition-transform duration-300';
+                notification.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                        </svg>
+                        <div>
+                            <div class="font-bold">🎉 New High Score!</div>
+                            <div class="text-sm">${score.toLocaleString()} points</div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                // Animate in
+                setTimeout(() => {
+                    notification.classList.remove('translate-x-full');
+                }, 100);
+                
+                // Animate out after 4 seconds
+                setTimeout(() => {
+                    notification.classList.add('translate-x-full');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 4000);
+            }
+
+            checkAchievements() {
+                const achievements = [];
+                
+                if (this.stats.gamesPlayed >= 10 && !this.stats.achievements.includes('dedicated_player')) {
+                    achievements.push({
+                        id: 'dedicated_player',
+                        title: 'Dedicated Player',
+                        description: 'Played 10 games',
+                        icon: '🎮'
+                    });
+                }
+                
+                if (this.stats.highScore >= 1000 && !this.stats.achievements.includes('score_master')) {
+                    achievements.push({
+                        id: 'score_master',
+                        title: 'Score Master',
+                        description: 'Reached 1,000 points',
+                        icon: '🏆'
+                    });
+                }
+                
+                if (this.stats.highScore >= 5000 && !this.stats.achievements.includes('block_destroyer')) {
+                    achievements.push({
+                        id: 'block_destroyer',
+                        title: 'Block Destroyer',
+                        description: 'Reached 5,000 points',
+                        icon: '💥'
+                    });
+                }
+                
+                achievements.forEach(achievement => {
+                    this.stats.achievements.push(achievement.id);
+                    this.showAchievementNotification(achievement);
+                });
+                
+                if (achievements.length > 0) {
+                    this.saveStats();
+                }
+            }
+
+            showAchievementNotification(achievement) {
+                const notification = document.createElement('div');
+                notification.className = 'fixed top-20 left-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-4 rounded-lg shadow-lg z-50 transform -translate-x-full transition-transform duration-300';
+                notification.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <div class="text-2xl">${achievement.icon}</div>
+                        <div>
+                            <div class="font-bold">Achievement Unlocked!</div>
+                            <div class="text-sm">${achievement.title}</div>
+                            <div class="text-xs opacity-90">${achievement.description}</div>
+                        </div>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.remove('-translate-x-full');
+                }, 100);
+                
+                setTimeout(() => {
+                    notification.classList.add('-translate-x-full');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 5000);
+            }
+
+            resetStats() {
+                if (confirm('Are you sure you want to reset all your game statistics? This cannot be undone.')) {
+                    localStorage.removeItem(this.storageKey);
+                    this.stats = {
+                        highScore: 0,
+                        gamesPlayed: 0,
+                        totalScore: 0,
+                        lastPlayed: null,
+                        achievements: []
+                    };
+                    this.updateDisplay();
+                    alert('Game statistics have been reset!');
+                }
+            }
+
+            getAverageScore() {
+                return this.stats.gamesPlayed > 0 ? Math.round(this.stats.totalScore / this.stats.gamesPlayed) : 0;
+            }
+        }
+
+        // Initialize game stats system
+        let gameStats;
+        document.addEventListener('DOMContentLoaded', function() {
+            gameStats = new GameStats();
+            
+            // Simulate score updates for demonstration (remove in production)
+            // This would normally be called by the actual game
+            window.simulateGameEnd = function(score) {
+                gameStats.updateHighScore(score || Math.floor(Math.random() * 2000) + 100);
+            };
+        });
+
+        // Game iframe communication (if the game supports postMessage)
+        window.addEventListener('message', function(event) {
+            // Verify origin for security
+            if (event.origin !== 'https://blockbreakergame.io') {
+                return;
+            }
+            
+            if (event.data.type === 'gameEnd' && event.data.score) {
+                gameStats.updateHighScore(event.data.score);
             }
         });
     </script>

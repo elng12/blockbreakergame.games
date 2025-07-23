@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://blockbreakergame.games/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all search engines to index the main content
+Allow: /index.html
+Allow: /favicon.svg
+Allow: /site.webmanifest
+Allow: /browserconfig.xml
+
+# Block access to sensitive files (if any exist)
+Disallow: /private/
+Disallow: /*.log$
+Disallow: /admin/
+Disallow: /config/
+
+# Allow social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Google-specific directives
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Bing-specific directives
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Additional SEO optimization
+# Host directive (helps with canonical URL)
+Host: https://blockbreakergame.games

@@ -19,7 +19,9 @@
 
 
 
-- [ ] 2. 实现头部和导航部分
+- [x] 2. 实现头部和导航部分
+
+
   - 使用语义化 HTML 结构编写头部组件
   - 创建带有游戏 logo/标题的导航栏，使用 H1 标签
 
@@ -28,6 +30,8 @@
   - 使用 Tailwind CSS 类为头部设置简洁、现代的外观样式
   - 为移动端和桌面端视图添加响应式设计
   - _需求：3.1, 3.2, 3.3, 4.2_
+
+
 
 
 
@@ -47,7 +51,15 @@
 
 
 
-- [ ] 4. 集成游戏 iframe 部分
+
+
+
+
+
+
+
+- [-] 4. 集成游戏 iframe 部分
+
   - 创建带有 H2 标题"Play Google Block Breaker Now"的响应式游戏部分
   - 嵌入游戏 URL https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html 的 iframe
   - 使用 Tailwind CSS 实现响应式 iframe 尺寸
