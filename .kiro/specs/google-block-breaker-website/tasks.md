@@ -37,6 +37,8 @@
 
 
 - [ ] 3. 构建带有主要内容的英雄区部分
+
+
   - 创建带有主要 H1 标题"Google Block Breaker - Play the Classic Arcade Game Online"的英雄区部分
   - 编写具有自然关键词整合的引人注目的英雄区文案
   - 使用 Tailwind 样式实现行动号召按钮
@@ -58,10 +60,9 @@
 
 
 
-- [-] 4. 集成游戏 iframe 部分
-
+- [x] 4. 集成游戏 iframe 部分
   - 创建带有 H2 标题"Play Google Block Breaker Now"的响应式游戏部分
-  - 嵌入游戏 URL https://cloud.onlinegames.io/games/2025/unity/monster-survivors/index-og.html 的 iframe
+  - 嵌入游戏 URL https://blockbreakergame.io/block-breaker.embed?v=1 的 iframe
   - 使用 Tailwind CSS 实现响应式 iframe 尺寸
   - 为 iframe 添加加载状态和错误处理
   - _需求：2.1, 2.2, 2.3, 3.3_
