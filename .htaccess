@@ -1,0 +1,37 @@
+# 强制XML文件的正确MIME类型
+AddType application/xml .xml
+AddType text/xml .xml
+
+# 站点地图特定配置
+<Files "sitemap.xml">
+    ForceType application/xml
+    Header set Content-Type "application/xml; charset=utf-8"
+</Files>
+
+<Files "sitemap-images.xml">
+    ForceType application/xml
+    Header set Content-Type "application/xml; charset=utf-8"
+</Files>
+
+# 防止.xml文件被当作HTML处理
+<FilesMatch "\.(xml)$">
+    ForceType application/xml
+    Header set Content-Type "application/xml; charset=utf-8"
+</FilesMatch>
+
+# 启用压缩以提高性能
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/xml
+    AddOutputFilterByType DEFLATE application/xml
+</IfModule>
+
+# 缓存控制
+<Files "sitemap*.xml">
+    ExpiresActive On
+    ExpiresDefault "access plus 1 day"
+</Files>
+
+# 确保mod_rewrite不会干扰XML文件
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} \.(xml)$ [NC]
+RewriteRule .* - [L]
